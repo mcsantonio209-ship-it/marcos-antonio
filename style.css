@@ -1125,6 +1125,9 @@ footer {
     .tech-item { padding: 6px 14px; font-size: 0.85rem; }
     .tech-slider::before, .tech-slider::after { width: 50px; }
     
+    /* Remove seta azul de serviços no mobile e reajusta espaçamento */
+    .srv-arrow { display: none; }
+    
     .contato-socials { flex-direction: column; gap: 20px; align-items: center; }
 }
 
