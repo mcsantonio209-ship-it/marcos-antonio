@@ -467,6 +467,7 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block; /* Remove o espaço fantasma na parte inferior da imagem */
     border-radius: 8px;
     position: relative;
     z-index: 1;
@@ -1072,6 +1073,11 @@ footer {
     .hero-left, .hero-right { align-items: center; padding: 0; }
     .hero-left h1::before { display: none; }
     section { padding: 80px 24px; }
+    #hero { padding: 0; } /* Evita que o padding esprema o conteúdo do hero */
+    
+    .srv-img-wrapper {
+        overflow: hidden; /* Previne vazamentos no mobile onde o hover 3D está desativado */
+    }
 }
 
 @media (min-width: 1024px) {
@@ -1112,6 +1118,12 @@ footer {
     .thin-wave-divider { height: 50px; margin: 30px 0; }
     
     .hero-center img { max-height: 50vh; }
+    .hero-right { display: none; } /* Oculta texto de introdução para abrir espaço para o slider */
+    
+    .hero-tech { padding-bottom: 30px; }
+    .tech-slider { padding: 10px 0; }
+    .tech-item { padding: 6px 14px; font-size: 0.85rem; }
+    .tech-slider::before, .tech-slider::after { width: 50px; }
     
     .contato-socials { flex-direction: column; gap: 20px; align-items: center; }
 }
